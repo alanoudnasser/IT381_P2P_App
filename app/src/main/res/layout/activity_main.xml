@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/connectionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Device Found"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonContainerLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/connectionTV"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/onOffBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.8"
+            android:textSize="12sp"
+            android:background="@drawable/rounded_btns"
+            android:text="On/Off" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="0.4" />
+
+        <Button
+            android:id="@+id/onDiscoverBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.8"
+            android:textSize="12sp"
+            android:background="@drawable/rounded_btns"
+            android:text="Discover" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/buttonContainerLL"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/allBookCategoriesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/listview"
+        android:gravity="center"
+        android:textColor="@color/app_color"
+        android:layout_marginStart="10dp"
+        android:padding="5dp"
+        android:text="All Book Categories"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookListRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/allBookCategoriesTV"
+        android:layout_above="@+id/buttonContLL"
+        android:layout_marginTop="20dp" />
+
+
+    <TextView
+        android:id="@+id/messageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Connection status"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonContLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/addBook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.8"
+            android:textSize="12sp"
+            android:background="@drawable/rounded_btns"
+            android:text="Add Book category" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="0.4" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.8"
+            android:textSize="12sp"
+            android:background="@drawable/rounded_btns"
+            android:text="Share Category" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/bottomContainerLL"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:weightSum="10">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextTypeMsg"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:layout_weight="8"-->
+<!--            android:hint="Message"-->
+<!--            android:textColor="@color/black" />-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/sendButton"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_weight="2"-->
+<!--            android:src="@drawable/baseline_send_24" />-->
+
+<!--    </LinearLayout>-->
+
+
+</RelativeLayout>

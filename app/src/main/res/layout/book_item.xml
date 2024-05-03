@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/categoryNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Category Name"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/app_color"
+        android:gravity="center"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:id="@+id/bookNameTV"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:maxLines="10"
+        android:text="Category Name"
+        android:textSize="12sp"
+        android:textColor="@color/app_color"
+        android:gravity="start|left"
+        android:padding="5dp"
+        android:layout_below="@+id/categoryNameTV"
+        />
+
+    <ImageView
+        android:id="@+id/categoryDelIV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_delete_outline_24"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/categoryNameTV"/>
+
+</RelativeLayout>
